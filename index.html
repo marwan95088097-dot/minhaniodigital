@@ -1,1 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infotechy - Provedor de Internet Via Fibra</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #0dcaf0;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --success-color: #198754;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .section-title.text-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .feature-icon {
+            background-color: rgba(13, 110, 253, 0.1);
+            color: var(--primary-color);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 3rem 0;
+        }
+        
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 0.5rem 2rem;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .badge {
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+        }
+        
+        .contact-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stats-box {
+            background-color: rgba(13, 110, 253, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            border-left: 4px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-wifi text-primary"></i> Infotechy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Internet Fibra Óptica de Alta Velocidade</h1>
+                    <p class="lead mb-4">Conectamos você ao mundo com a melhor tecnologia de fibra óptica. Estabilidade, velocidade e suporte técnico especializado para sua casa ou empresa.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-light btn-lg">Contrate Agora</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg">Nossos Planos</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Fibra óptica" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title text-center">Sobre a Infotechy</h2>
+                    <p class="lead">Há mais de 4 anos conectando pessoas e empresas em São José dos Pinhais</p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Nossa História</h3>
+                            <p class="card-text">A <strong>Infotechy Internet Via Fibra LTDA</strong> foi fundada em 20 de outubro de 2021, com o objetivo de fornecer serviços de comunicação multimídia de alta qualidade para a região de São José dos Pinhais e arredores.</p>
+                            <p class="card-text">Desde então, temos investido constantemente em tecnologia de ponta e infraestrutura para oferecer a melhor experiência de conexão aos nossos clientes.</p>
+                            <p class="card-text">Nossa missão é proporcionar acesso à internet de alta velocidade com estabilidade e suporte técnico excepcional, contribuindo para o desenvolvimento digital da nossa comunidade.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="stats-box h-100">
+                        <h3 class="mb-4">Informações da Empresa</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-building fs-4 text-primary me-2"></i>
+                                    <h5 class="mb-0">Razão Social</h5>
+                                </div>
+                                <p class="mb-0">Infotechy Internet Via Fibra LTDA</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-card-checklist fs-4 text-primary me-2"></i>
+                                    <h5 class="mb-0">CNPJ</h5>
+                                </div>
+                                <p class="mb-0">43.940.715/0001-37</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-calendar-event fs-4 text-primary me-2"></i>
+                                    <h5 class="mb-0">Data de Abertura</h5>
+                                </div>
+                                <p class="mb-0">20/10/2021</p>
+                                <small class="text-muted">4 anos, 3 meses e 16 dias de experiência</small>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle fs-4 text-primary me-2"></i>
+                                    <h5 class="mb-0">Situação Cadastral</h5>
+                                </div>
+                                <span class="badge bg-success">Ativa</span>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-briefcase fs-4 text-primary me-2"></i>
+                                    <h5 class="mb-0">Atividade Principal</h5>
+                                </div>
+                                <p class="mb-0">61.10-8-03 - Serviços de comunicação multimídia - SCM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h3 class="section-title">Nossos Valores</h3>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="bi bi-lightning-charge fs-3"></i>
+                        </div>
+                        <h5>Velocidade</h5>
+                        <p>Oferecemos conexões de alta velocidade para atender todas as suas necessidades online.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="bi bi-shield-check fs-3"></i>
+                        </div>
+                        <h5>Estabilidade</h5>
+                        <p>Nossa infraestrutura garante uma conexão estável e sem interrupções.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="bi bi-headset fs-3"></i>
+                        </div>
+                        <h5>Suporte Técnico</h5>
+                        <p>Equipe especializada disponível para resolver qualquer problema rapidamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title text-center">Nossos Planos</h2>
+                    <p class="lead">Escolha o plano ideal para sua necessidade</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header text-center py-4 bg-primary text-white">
+                            <h4 class="mb-0">Plano Básico</h4>
+                        </div>
+                        <div class="card-body text-center py-4">
+                            <h2 class="card-title">100 Mbps</h2>
+                            <p class="text-muted">Ideal para uso doméstico</p>
+                            <div class="my-4">
+                                <span class="display-5 fw-bold">R$ 79,90</span>
+                                <span class="text-muted">/mês</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Upload de 50 Mbps</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Wi-Fi Grátis</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Suporte 24h</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Instalação Grátis</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent text-center py-3">
+                            <a href="#contact" class="btn btn-primary btn-lg w-100">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-primary shadow-lg">
+                        <div class="card-header text-center py-4 bg-primary text-white position-relative">
+                            <h4 class="mb-0">Plano Premium</h4>
+                            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-warning text-dark">Mais Popular</span>
+                        </div>
+                        <div class="card-body text-center py-4">
+                            <h2 class="card-title">300 Mbps</h2>
+                            <p class="text-muted">Perfeito para famílias e home office</p>
+                            <div class="my-4">
+                                <span class="display-5 fw-bold">R$ 119,90</span>
+                                <span class="text-muted">/mês</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Upload de 150 Mbps</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Wi-Fi Avançado</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Suporte Prioritário</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Instalação em até 24h</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Router Dual-Band</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent text-center py-3">
+                            <a href="#contact" class="btn btn-primary btn-lg w-100">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header text-center py-4 bg-primary text-white">
+                            <h4 class="mb-0">Plano Empresarial</h4>
+                        </div>
+                        <div class="card-body text-center py-4">
+                            <h2 class="card-title">1 Gbps</h2>
+                            <p class="text-muted">Para empresas e gamers</p>
+                            <div class="my-4">
+                                <span class="display-5 fw-bold">R$ 199,90</span>
+                                <span class="text-muted">/mês</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Upload de 500 Mbps</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Wi-Fi Empresarial</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Suporte Dedicado</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Instalação Imediata</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> IP Fixo Incluso</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Garantia de 99,9% Uptime</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent text-center py-3">
+                            <a href="#contact" class="btn btn-primary btn-lg w-100">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div class="alert alert-info" role="alert">
+                        <h5 class="alert-heading"><i class="bi bi-info-circle me-2"></i> Todos os planos incluem:</h5>
+                        <p class="mb-0">Conexão 100% fibra óptica • Wi-Fi de alta performance • Suporte técnico especializado • Sem fidelidade obrigatória</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title text-center">Entre em Contato</h2>
+                    <p class="lead">Estamos à disposição para atender você</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mb-5">
+                    <div class="contact-box h-100">
+                        <h3 class="mb-4">Informações de Contato</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="contact-info">
+                                    <h5><i class="bi bi-geo-alt"></i> Endereço</h5>
+                                    <p>Rua Santina Manzoque Zen, 71<br>Braga<br>São José dos Pinhais - PR<br>CEP: 83020-280</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="contact-info">
+                                    <h5><i class="bi bi-telephone"></i> Telefone</h5>
+                                    <p><a href="tel:4137976537">(41) 3797-6537</a></p>
+                                    
+                                    <h5 class="mt-4"><i class="bi bi-envelope"></i> E-mail</h5>
+                                    <p><a href="mailto:marwan95088097@gmail.com">marwan95088097@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="contact-info">
+                                    <h5><i class="bi bi-mailbox"></i> Endereço para Correspondência</h5>
+                                    <p>Infotechy Internet Via Fibra LTDA<br>Rua Santina Manzoque Zen, 71<br>Braga<br>São José dos Pinhais - PR<br>83020-280</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <h4 class="mb-4">Envie uma Mensagem</h4>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Telefone</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="message" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-5">
+                    <div class="map-container h-100">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.902986747194!2d-49.20597932433772!3d-25.478915830422972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcf4f0b5e6c89b%3A0x3bb56d5d5b7a76a4!2sR.%20Santina%20Manzoque%20Zen%2C%2071%20-%20Braga%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%20-%20PR%2C%2083020-280!5e0!3m2!1spt-BR!2sbr!4v1648651234567!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5 class="mb-3">Informações de Registro</h5>
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <strong>CNPJ:</strong> 43.940.715/0001-37
+                            </div>
+                            <div class="col-12 mb-2">
+                                <strong>Inscrição Estadual PR:</strong> 90951083-07
+                            </div>
+                            <div class="col-12">
+                                <strong>Razão Social:</strong> Infotechy Internet Via Fibra LTDA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4><i class="bi bi-wifi"></i> Infotechy</h4>
+                    <p>Provedor de internet via fibra óptica em São José dos Pinhais - PR. Conectando você ao mundo com alta velocidade e estabilidade.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="me-3 text-secondary"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="me-3 text-secondary"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="me-3 text-secondary"><i class="bi bi-whatsapp fs-5"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home">Início</a></li>
+                        <li class="mb-2"><a href="#about">Sobre</a></li>
+                        <li class="mb-2"><a href="#services">Planos</a></li>
+                        <li class="mb-2"><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5>Horário de Atendimento</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>Comercial:</strong> Seg-Sex: 8h-18h | Sáb: 8h-12h</li>
+                        <li class="mb-2"><strong>Suporte Técnico:</strong> 24 horas por dia</li>
+                        <li class="mb-2"><strong>Emergências:</strong> 24 horas por dia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Infotechy Internet Via Fibra LTDA. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">CNPJ: 43.940.715/0001-37 | IE: 90951083-07</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth Scroll Script -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado pela sua mensagem! Entraremos em contato em breve.');
+            this.reset();
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow');
+            } else {
+                navbar.classList.remove('shadow');
+            }
+        });
+    </script>
+</body>
+</html>
